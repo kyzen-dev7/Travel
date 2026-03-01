@@ -56,7 +56,7 @@ export default function ItineraryView({ itinerary, onSave }: ItineraryViewProps)
   };
 
   const handleShare = () => {
-    const url = `${window.location.origin}/shared/${localItinerary.shareId}`;
+    const url = `${window.location.origin}/shared?id=${localItinerary.shareId}`;
     navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
